@@ -31,9 +31,3 @@ addEventListener will let you respond to events on an element like "click".
 Be sure to:
 
 
-Ask questions in Discord or setup a mentoring session if you are a Molecular or Catalyst student.
-Use Google, Stack Overflow, MDN and other resources to help you when you feel stuck.
-Have fun! This will probably be frustrating in a lot of ways, but when you finish, you will have learned something of significance. You'll be able to use the skills you learn to build other front-end ideas you have :)
-Happy Coding!
-
-P.S. Show off your creation in Discord once you finish!
