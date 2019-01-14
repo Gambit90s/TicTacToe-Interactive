@@ -48,6 +48,17 @@ function checkBottom() {
     }
 }
 
+function checkDiagonal() {
+    if( cells[0].textContent === cells[4].textContent && cell[8].textContent === cell[8].textContent && isEmpty(0, 4, 8)){
+        return true;
+    }   else if( cells[2].textContent === cells[4].textContent && cell[2].textContent === cell[6].textContent && isEmpty(2, 4, 6)) {
+        return true;
+    }   else {
+        return false;
+    }
+}
+
+
 function isEmpty(a, b, c) {
     if(cells[a].textContent === "" || cells[b].textContent === "" || cells[c].textContent === "") {
         return true;
