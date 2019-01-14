@@ -1,10 +1,15 @@
 let cells = document.querySelectorAll('.row div');
+let gameOver = false;
 let currentPlayer = 'X';
 cells.forEach(function(cell){
     cell.addEventListener('click', cellClicked);
 });
 
 function cellClicked(e) {
+
+    if(gameOver === true) {
+        resetBoard();
+    }
 
     if(e.target.textContent !== '') {
         return;
@@ -67,6 +72,10 @@ function isEmpty(a, b, c) {
     }
 
 
+
+}
+
+function resetBoard() {
 
 }
 
