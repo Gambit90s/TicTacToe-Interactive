@@ -20,49 +20,87 @@ function cellClicked(e) {
 };
 
 function checkGame() {
-    if(checkTop()) {
+    if(checkTop()  ||checkMiddle() || checkBottom() || checkDiagonal() || checkLeft() || checkCenter() || checkRight()) {
         return true;
     } else {
         return false;
     
 }
 
+function checkLeft() {
+    if(cells[0].textContent === cells[3].textContent && cells[3].textContent === cells[6].textContent && !isEmpty(0, 3, 6)){
+        gameOver = true;
+        return true;
+        
+    }   else {
+        return false;
+    }
+    
+}
+
+function checkCenter() {
+    if(cells[1].textContent === cells[4].textContent && cells[4].textContent === cells[7].textContent && !isEmpty(1, 4, 7)){
+        gameOver = true;
+        return true;
+        
+    }   else {
+        return false;
+    }
+    
+}
+
+function checkRight() {
+    if(cells[2].textContent === cells[5].textContent && cells[5].textContent === cells[8].textContent && !isEmpty(2, 5, 8)){
+        gameOver = true;
+        return true;
+        
+    }   else {
+        return false;
+    }
+    
+}
+
+
 }
  
 function checkTop() {
-    if( cells[0].textContent === cells[1].textContent && cell[1].textContent === cell[2].textContent && isEmpty(0, 1, 2)){
-        return true;
+    if( cells[0].textContent === cells[1].textContent && cells[1].textContent === cells[2].textContent && !isEmpty(0, 1, 2)){
         gameOver = true;
+        return true;
+        
     }   else {
         return false;
     }
 }
 
 function checkMiddle() {
-    if( cells[3].textContent === cells[3].textContent && cell[4].textContent === cell[5].textContent && isEmpty(3, 4, 5)){
-        return true;
+    if( cells[3].textContent === cells[3].textContent && cells[4].textContent === cells[5].textContent && !isEmpty(3, 4, 5)){
         gameOver = true;
+        return true;
+        
     }   else {
         return false;
     }
 }
 
 function checkBottom() {
-    if( cells[6].textContent === cells[6].textContent && cell[7].textContent === cell[8].textContent && isEmpty(6, 7, 8)){
-        return true;
+    if( cells[6].textContent === cells[6].textContent && cells[7].textContent === cells[8].textContent && !isEmpty(6, 7, 8)) {
         gameOver = true;
+        return true;
+        
     }   else {
         return false;
     }
 }
 
 function checkDiagonal() {
-    if( cells[0].textContent === cells[4].textContent && cell[8].textContent === cell[8].textContent && isEmpty(0, 4, 8)){
-        return true;
+    if( cells[0].textContent === cells[4].textContent && cells[8].textContent === cells[8].textContent && !isEmpty(0, 4, 8)){
         gameOver = true;
-    }   else if( cells[2].textContent === cells[4].textContent && cell[2].textContent === cell[6].textContent && isEmpty(2, 4, 6)) {
         return true;
+      
+    }   else if( cells[2].textContent === cells[4].textContent && cells[2].textContent === cells[6].textContent && !isEmpty(2, 4, 6)) {
         gameOver = true;
+        return true;
     }   else {
         return false;
     }
